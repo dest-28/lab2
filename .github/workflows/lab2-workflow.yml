@@ -14,10 +14,12 @@ on:
 
 jobs:
   job1:
+    if: ${{ inputs.run_job == 'job1' }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "Exploring Workflow Dispatch Trigger"
   job2:
+    if: ${{ inputs.run_job == 'job2' }}
     runs-on: ubuntu-latest
     steps:
       - name: Printing Custom Message
